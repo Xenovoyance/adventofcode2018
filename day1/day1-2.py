@@ -1011,22 +1011,24 @@ inputstring = """+15
 
 frequency = 0
 checked_frequencies = [0]
+missioncomplete = False
+loops = 0
 
-valuefound = False
-
-# Separate on comma.
 freqmoves = inputstring.split("\n")
 
-# Loop and print each city name.
-for frequencymove in freqmoves:
-    frequency += int(frequencymove)
-    try:
-        checked_frequencies.index(frequency)
-    except:
-        print str(frequency) + " was not in list."
-        checked_frequencies.append(frequency)
-    else:
-        print "Found one: " + frequency
-    # print frequency
+while missioncomplete is False:
+    print "Loop: " + str(loops)
+    loops += 1
+    for frequencymove in freqmoves:
+        frequency += int(frequencymove)
+        try:
+            checked_frequencies.index(frequency)
+        except:
+            # print str(frequency) + " was not in list."
+            checked_frequencies.append(frequency)
+        else:
+            print "Found one: " + str(frequency)
+            missioncomplete = True
 
 # Part 1 answer was 477
+# Part 2 answer was 390 found in iteration 137
