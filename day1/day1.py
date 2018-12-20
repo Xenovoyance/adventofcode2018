@@ -1016,8 +1016,7 @@ valuefound = False
 
 # Separate on comma.
 freqmoves = inputstring.split("\n")
-
-# Loop and print each city name.
+# f = reduce(lambda x,y: x+y, freqmoves)
 for frequencymove in freqmoves:
     frequency += int(frequencymove)
     try:

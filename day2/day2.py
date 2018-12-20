@@ -18,8 +18,8 @@ with open(input) as blockstream:
                 uniquevaluesinstream.append(x)
 
         if run_env == "test":  # debugging, set flag at top
-            print stream
-            print uniquevaluesinstream
+            print(stream)
+            print(uniquevaluesinstream)
 
         updateTwos = False
         updateThrees = False
@@ -37,7 +37,7 @@ with open(input) as blockstream:
             threes += 1
 
         if run_env == "test":  # debugging, set flag at top
-            print "Twos: " + str(twos)
-            print "Threes: " + str(threes)
+            print("Twos: " + str(twos))
+            print("Threes: " + str(threes))
 
-    print "Checksum: " + str(twos * threes)
+    print("Checksum: " + str(twos * threes))

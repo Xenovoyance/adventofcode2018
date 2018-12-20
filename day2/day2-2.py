@@ -1,3 +1,5 @@
+#!/usr/local/bin/python3
+
 run_env = "prod"  # test or prod
 
 if run_env == "test":
@@ -14,10 +16,11 @@ def checksumCompare(_string1, _string2):  # return the number of differences bet
             differences += 1
         charposition += 1
     if differences == 1:
-        print _string1 + "/" + _string2
+        print(_string1 + "/" + _string2)
         return 1
     else:
         return 0
+
 
 
 with open(input) as blockstream:
